@@ -1,33 +1,33 @@
 // const dataConn = require('../mdb_data_connection');
-const Data = require('../models/Data')
+const Task = require('../models/Task')
 
 const getCustomers = async (req, res) => {
-    const data = await Data.find(); 
-    return res.json(data);
+    const task = await Task.find(); 
+    return res.json(task);
 };
 
 const getCustomerById = async (req, res) => {
-    const data = await Data.findById(req.params.id); 
-    return res.json(data);
+    const task = await Task.findById(req.params.id); 
+    return res.json(task);
 };
 
 const createCustomer = async (req, res) => {
-    const data = new Data(req.body);
-    await data.save();
+    const task = new Task(req.body);
+    await task.save();
     res.json({
         status: 'Data saved'
     });
 }
 
 const updateCustomer = async (req, res) => {
-    await Data.findByIdAndUpdate(req.params.id, req.body);
+    await Task.findByIdAndUpdate(req.params.id, req.body);
     res.json({
         status: 'Data updated'
     })
 }
 
 const deleteCustomer = async (req, res) => {
-    await Data.findByIdAndRemove(req.params.id);
+    await Task.findByIdAndRemove(req.params.id);
     res.json({
         status: 'Data removed'
     })

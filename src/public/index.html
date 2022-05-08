@@ -9,18 +9,16 @@
     </head>
     <body>
         <div id="app">
-            <!-- <menu-component :user="userName" @response="(msg) => childMsg = msg"></menu-component>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <h5 class="text-center">Wellcome to my APP with API</h5> -->
+            <!-- <h1>Hello World</h1> -->
         </div>    
-
-        <script src="https://unpkg.com/vue@3"></script>
-        <!-- <script src="./js/bundle.js"></script> -->
-        <script type="module" src="../app/index.js"></script>
-        <!-- <script src="js/app.component.js"></script>
-        <script src="js/menu.component.js"></script> -->
-        <!-- <script>
-            const mountedApp = app.mount('#app');
+        <!-- <script src="https://unpkg.com/vue@3"></script> -->
+        <!-- <script type="importmap">
+            {
+              "imports": {
+                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+              }
+            }
         </script> -->
+        <script type="module" src="./js/index.js"></script> <!-- ./js/index.js is found thanks /js mount path -->
     </body>
 </html>

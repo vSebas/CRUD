@@ -2,9 +2,9 @@
   "name": "bases_de_datos",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon src/index.js --exec babel-node",
+    "dev": "nodemon src/server.js --exec babel-node",
     "webpack": "webpack --mode development --watch"
   },
   "keywords": [],
@@ -28,8 +28,6 @@
     "@babel/core": "^7.17.10",
     "@babel/node": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
-    "babel-loader": "^8.2.5",
-    "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2"
+    "babel-loader": "^8.2.5"
   }
 }

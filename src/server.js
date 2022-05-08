@@ -2,14 +2,13 @@ import express from 'express';
 import exphbs from 'express-handlebars';
 
 // const express = require('express');
+require('./mdb_data_connection');
 const morgan = require('morgan');
 const bodyParse = require('body-parser');
 const customerRoutes = require('./routes/customer_routes');
-
 const cors = require('cors');
 const app = express();
 
-require('./mdb_data_connection')
 
 // app.set('views', path.join(__dirname, 'views'));
 // app.engine(".hbs", exphbs({
@@ -30,8 +29,9 @@ app.use(cors());
 app.use('/customer',customerRoutes); // Poner /customer aquí, y no en routes/customer_routes sirve para definir qué operaciones
                                      // tiene disponibles la aplicación de front end aquí
 
-// Static files : sends /views to server, where the html files are located
+// Static files : sends /public to server, where the html files are located
 app.use(express.static(__dirname + '/public'));
+app.use('/js',express.static(__dirname + '/app'));
 
 // Server is listening
 app.listen(app.get('port'), () => {

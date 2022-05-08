@@ -1,5 +1,5 @@
-const express = require('express');
 const customerController = require('../controllers/mdb_customer_controller');
+const express = require('express');
 const router = express.Router(); // Object to create routes
 
 router.get('/', customerController.getCustomers); // When initial route to /customer required (GET), you respond with customerController.getCustomers
