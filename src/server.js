@@ -31,7 +31,7 @@ app.use('/customer',customerRoutes); // Poner /customer aquí, y no en routes/cu
 
 // Static files : sends /public to server, where the html files are located
 app.use(express.static(__dirname + '/public'));
-app.use('/js',express.static(__dirname + '/app'));
+app.use('/dist',express.static(__dirname + '/dist'));
 
 // Server is listening
 app.listen(app.get('port'), () => {
