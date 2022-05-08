@@ -1,4 +1,6 @@
-// Good tutorials
+// Good tutorials on webpack:
+// https://medium.com/@kasulejoseph/how-to-create-a-vue-js-application-from-scratch-with-webpack-and-babel-c1629d411127
+// https://www.neoguias.com/tutorial-webpack/#Que_es_Webpack
 
 const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
@@ -18,6 +20,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader"
+        // use: ['babel-loader'],
       },
 
       // css-loader to bundle all the css files into one file and vue-style-loader
