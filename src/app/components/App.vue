@@ -57,7 +57,7 @@
                         <th>Birthday</th>
                     </thead>
                     <tbody>
-                        <tr v-for="task of tasks">
+                        <tr v-for="task in tasks">
                             <td>{{task.name}}</td>
                             <td>{{task.phone}}</td>
                             <td>{{task.email}}</td>
